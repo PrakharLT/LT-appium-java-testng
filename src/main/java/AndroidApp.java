@@ -29,11 +29,14 @@ public class AndroidApp {
             capabilities.setCapability("build","Java TestNG Android");
             capabilities.setCapability("name",platform+" "+device+" "+version);
             capabilities.setCapability("deviceName", device);
+            capabilities.setCapability("device", device);
             capabilities.setCapability("platformVersion",version);
             capabilities.setCapability("platformName", platform);
             capabilities.setCapability("isRealMobile", true);
             //AppURL (Create from Wikipedia.apk sample in project)
             capabilities.setCapability("app", "lt://proverbial-android"); //Enter your app url
+            capabilities.setCapability("appID", "lt://proverbial-android"); //Enter your app url
+
             capabilities.setCapability("deviceOrientation", "PORTRAIT");
             capabilities.setCapability("console", true);
             capabilities.setCapability("network", false);

@@ -33,14 +33,18 @@ public class iOSApp {
             capabilities.setCapability("platformVersion",version);
             capabilities.setCapability("platformName", platform);
             capabilities.setCapability("isRealMobile", true);
+//            capabilities.setCapability("app", "lt://APP10160161211708462360356917"); //Enter your app url
+
             capabilities.setCapability("app", "lt://proverbial-ios"); //Enter your app url
             capabilities.setCapability("deviceOrientation", "PORTRAIT");
             capabilities.setCapability("console", true);
             capabilities.setCapability("network", false);
             capabilities.setCapability("visual", true);
             capabilities.setCapability("devicelog", true);
-            //capabilities.setCapability("geoLocation", "HK");
+//            capabilities.setCapability("networkThrottling", "offline");
 
+            //capabilities.setCapability("geoLocation", "HK");
+//            ltOptions.put("networkThrottling", "Offline");
             String hub = "https://" + userName + ":" + accessKey + gridURL;
             driver = new AppiumDriver(new URL(hub), capabilities);
 
