@@ -56,3 +56,4 @@ mvn test -P ios-parallel
 ### **Step 4: View Test Execution**
 
 Once you have run your tests, you can view the test execution along with logs. You will be able to see the test cases passing or failing. You can view the same at [LambdaTest Automation](https://accounts.lambdatest.com/login).
+change 1
