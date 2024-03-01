@@ -11,6 +11,7 @@ jobs:
     env:
       LT_USERNAME: prakhargahlot
       LT_ACCESS_KEY: KSFyXiVoPkQ9xWSczVlR0BeL8Z6mU4oHvJWZXHgToD6hElruWN
+      BuildName: someName_TriggeredFromGHA
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -24,7 +25,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B clean install
     - name: Set LambdaTest credentials
-      run: echo "LT_USERNAME=${LT_USERNAME}" >> $GITHUB_ENV && echo "LT_ACCESS_KEY=${LT_ACCESS_KEY}" >> $GITHUB_ENV
+      run: echo "LT_USERNAME=${LT_USERNAME}" >> $GITHUB_ENV && echo "LT_ACCESS_KEY=${LT_ACCESS_KEY}" >> $GITHUB_ENV && echo "BuildName=${BuildName}" >> $GITHUB_ENV
 
     - name: Run TestNG Tests
       run: mvn test -P android-single
